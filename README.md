@@ -1,6 +1,6 @@
 # Debsacker
 
-TODO: Write a gem description
+[![Build status](https://travis-ci.org/konstantinous/debsacker.svg)](https://travis-ci.org/konstantinous/debsacker)
 
 ## Installation
 
