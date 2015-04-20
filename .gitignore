@@ -8,3 +8,6 @@
 /spec/reports/
 /tmp/
 *.swp
+.idea/
+.ruby-version
+.ruby-gemset

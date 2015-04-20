@@ -6,10 +6,10 @@ require 'debsacker/version'
 Gem::Specification.new do |spec|
   spec.name          = "debsacker"
   spec.version       = Debsacker::VERSION
-  spec.authors       = ["Konstantin Khokhlov"]
-  spec.email         = ["lazychyvak@gmail.com"]
+  spec.authors       = ["Konstantin Khokhlov", "Aleksandr Fomin"]
+  spec.email         = ["lazychyvak@gmail.com", "ll.wg.bin@gmail.com"]
   spec.summary       = %q{Debian packaging for Ruby and Ruby on Rails applications}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/konstantinous/debsacker"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

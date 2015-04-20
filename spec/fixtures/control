@@ -1,0 +1,12 @@
+Source: debsacker
+Section: misc
+Priority: optional
+Maintainer: debsacker <info@example.com>
+Build-Depends: apt (>= 7.0.50~), cow
+Standards-Version: 3.8.4
+
+Package: debsacker
+Homepage: https://github.com/konstantinous/debsacker
+Architecture: amd64
+Depends: ruby
+Description: Build application as a debian/ubuntu package

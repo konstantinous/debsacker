@@ -2,6 +2,9 @@
 # encoding: utf-8
 
 require 'debsacker'
+require 'debsacker/options'
+require 'optparse'
 
-param = ARGV[0] || ''
-Debsacker::Creator.go(param)
+dependencies = Debsacker::Options::Config.build
+
+Debsacker::Creator.go(dependencies[:version], dependencies[:control])
