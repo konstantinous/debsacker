@@ -27,6 +27,7 @@ module Debsacker
 
         version << "-#{ branch_name }" if add_branch
         version << "-#{ distro_name }" if add_distro
+
         version
       end
 
@@ -41,7 +42,14 @@ module Debsacker
       end
 
       def tag
-        SystemGateway.perform('git symbolic-ref -q --short HEAD || git describe --tags --exact-match').strip
+        last_ref = SystemGateway.perform('git symbolic-ref -q --short HEAD || git describe --tags --exact-match').strip
+        tags = SystemGateway.perform('git tag').split($/)
+
+        if tags.include? last_ref
+          last_ref
+        else
+          tags.last
+        end
       end
 
       def commit

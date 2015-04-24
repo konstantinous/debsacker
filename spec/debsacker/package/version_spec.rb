@@ -1,16 +1,24 @@
 describe Debsacker::Package::Version do
   it 'should return version with tag name' do
-    expect(Debsacker::SystemGateway).to receive(:perform).and_return('0.10.0')
+    expect(Debsacker::SystemGateway).to receive(:perform).exactly(2).times.and_return('0.10.0')
     version = described_class.new('tag')
 
     expect(version.generate).to eq '0.10.0'
   end
 
   it 'should return version with tag name by default' do
-    expect(Debsacker::SystemGateway).to receive(:perform).and_return('0.10.0')
+    expect(Debsacker::SystemGateway).to receive(:perform).exactly(2).times.and_return('0.10.0')
     version = described_class.new(nil)
 
     expect(version.generate).to eq '0.10.0'
+  end
+
+  it 'should return version last tag if current git ref is not tag' do
+    expect(Debsacker::SystemGateway).to receive(:perform).and_return('master')
+    expect(Debsacker::SystemGateway).to receive(:perform).and_return("0.8.0#{ $/ }0.9.0#{ $/ }")
+    version = described_class.new('tag')
+
+    expect(version.generate).to eq '0.9.0'
   end
 
   it 'should return version with commit name' do
