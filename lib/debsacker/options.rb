@@ -25,7 +25,7 @@ module Debsacker
             options[:version] = v
           end
 
-          opts.on('-d', '--[no-]distro', 'Add distro name to version name (default false)') do |add|
+          opts.on('-d', '--[no-]distro', 'Add distro name to version name (default true)') do |add|
             options[:distro] = add
           end
 
