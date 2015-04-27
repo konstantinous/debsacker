@@ -1,6 +1,7 @@
 # Debsacker
 
 [![Build status](https://travis-ci.org/konstantinous/debsacker.svg)](https://travis-ci.org/konstantinous/debsacker)
+[![Gem Version](https://badge.fury.io/rb/debsacker.svg)](http://badge.fury.io/rb/debsacker)
 
 Build your application into debian package.
 
