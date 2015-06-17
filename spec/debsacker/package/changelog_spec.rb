@@ -8,7 +8,7 @@ describe Debsacker::Package::Changelog do
     changelog.author = 'debsacker <info@debsacker.com>'
 
     lines=[ 'Debsacker (1.2.1) stable; urgency=medium',
-            '  * bug closed #123123',
+            ' * bug closed #123123',
             " -- Made by debsacker <info@debsacker.com> #{ DateTime.now.strftime('%a, %e %b %Y %T %z') }"]
     expect(changelog.lines('1.2.1')).to eq(lines)
   end

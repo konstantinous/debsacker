@@ -19,7 +19,7 @@ module Debsacker
         date = DateTime.now.strftime('%a, %e %b %Y %T %z')
         [
             "#{ project_name } (#{ version }) stable; urgency=medium",
-            "  * #{ comment }",
+            " * #{ comment }",
             " -- Made by #{ author } #{ date }"
         ]
       end
