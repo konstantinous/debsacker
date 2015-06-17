@@ -27,8 +27,7 @@ module Debsacker
       begin
         File.open('debian/changelog', 'w') do |file|
           @changelog.lines(@version).each do |line|
-            file.puts(line)
-            file.puts($/)
+            file.print(line)
           end
         end
       rescue
